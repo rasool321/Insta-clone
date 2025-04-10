@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+.profile-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.username-display {
+    display: none;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.toggle-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-list li:hover {
+    background-color: #444;
+}
+
+/* Main Content */
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.upload-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+.stories, .reels, .posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.story, .reel-item, .post {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.post img, .post video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

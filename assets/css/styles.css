@@ -1,0 +1,368 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+    transition: background-color 0.3s, color 0.3s; /* Transition for color change */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(131, 89, 167);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.profile-picture {
+    margin-left: 20px; /* Add some space between the button and the profile picture */
+}
+
+.profile-pic {
+    width: 40px; /* Set a fixed width for the profile picture */
+    height: 40px; /* Set a fixed height for the profile picture */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+  /* Sticky Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(109, 138, 199); /* Sidebar background color */
+    color: white;
+    padding: 20px;
+    transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+        position: relative; /* Change position for mobile */
+    }
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Animation for background and scale */
+    border-radius: 5px; /* Rounded corners for list items */
+}
+
+/* Hover Effect for Navigation Items */
+.nav-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Remove Underline from Links */
+.nav-list li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */
+    display: block; /* Make the entire list item clickable */
+    padding: 10px; /* Add padding for better click area */
+}
+
+/* Optional: Add hover effect for links */
+.nav-list li a:hover {
+    color: #ffffff; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+        /* Main Content */
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .stories, .posts {
+            display: flex;
+            overflow-x: auto; /* Allow horizontal scrolling */
+            padding: 10px;
+        }
+        
+        .story, .post {
+            flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+            width: 200px; /* Set a fixed width for each story/post */
+            margin-right: 10px; /* Space between items */
+            border: 1px solid #ccc; /* Optional: Add a border */
+            border-radius: 5px; /* Optional: Rounded corners */
+            padding: 10px; /* Optional: Padding inside the card */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+        }
+        
+        .story video, .post video {
+            width: 100%; /* Make video fit the card */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        .story img, .post img {
+            width: 100%; /* Make image fit the card */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .upload-button {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            border: none;
+        }        
+
+      /* Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animation */
+    font-size: 16px; /* Increase font size for better readability */
+}
+/* Toggle Button */
+#toggleColorBtn {
+    background-color: #007bff; /* Blue for toggle */
+    color: white;
+    padding: 10px 15px; /* Add padding for better click area */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Animation */
+}
+
+#toggleColorBtn:hover {
+    background-color: #e675bc; /* Darker blue on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Shadow effect */
+    color: #e0e0e0; /* Change text color on hover */
+}
+
+/* Upload Story Button */
+#uploadStoryBtn {
+    background-color: #28a745; /* Green for upload */
+    color: white;
+    padding: 10px 15px; /* Add padding for better click area */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Animation */
+}
+
+#uploadStoryBtn:hover {
+    background-color: #adb968; /* Darker green on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4); /* Shadow effect */
+    color: #e0e0e0; /* Change text color on hover */
+}
+
+/* Additional Button Styles for Consistency */
+button {
+    cursor: pointer; /* Pointer cursor for buttons */
+    font-weight: bold; /* Bold text for better visibility */
+}
+
+/* Responsive Button Styles */
+@media (max-width: 768px) {
+    #toggleColorBtn, #uploadStoryBtn {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+
+/* Like Button */
+.like-button {
+    background-color: #ffc107; /* Yellow for like */
+    color: white;
+    padding: 10px 15px; /* Add padding for better click area */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Animation */
+}
+
+.like-button:hover {
+    background-color: #d84848; /* Darker yellow on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(255, 193, 7, 0.4); /* Shadow effect */
+    color: #fff; /* Ensure text remains white on hover */
+}
+
+/* Comment Button */
+.comment-button {
+    background-color: #0c3969; /* Blue for comment */
+    color: white;
+    padding: 10px 15px; /* Add padding for better click area */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s; /* Animation */
+}
+
+.comment-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Shadow effect */
+    color: #fff; /* Ensure text remains white on hover */
+}
+
+.reply-text {
+    color: #007bff; /* Link color */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    text-decoration: underline; /* Underline to indicate it's clickable */
+}
+
+.reply-text:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+/* Responsive Button Styles */
+@media (max-width: 768px) {
+    .like-button, .comment-button, .reply-button {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .story, .post {
+        width: calc(50% - 20px); /* Two cards in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .story, .post {
+        width: 100%; /* One card in a row on very small screens */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        font-size: 14px; /* Smaller font size */
+    }
+
+}
+.profile-info {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding for spacing */
+    margin: 20px 0; /* Margin for spacing from other elements */
+}
+
+.profile-info h2 {
+    font-size: 24px; /* Larger font size for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Darker text color */
+}
+
+.profile-info label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels for emphasis */
+    color: #555; /* Slightly lighter color for labels */
+}
+
+.profile-info input[type="email"],
+.profile-info textarea,
+.profile-info input[type="file"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below inputs */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.profile-info input[type="email"]:focus,
+.profile-info textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.profile-info button.update-button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color for button */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.profile-info button.update-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.profile-info textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+@media (max-width: 600px) {
+    .profile-info {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .profile-info h2 {
+        font-size: 20px; /* Smaller font size for heading */
+    }
+
+    .profile-info button.update-button {
+        width: 100%; /* Full width for button on small screens */
+    }
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #333; /* Default icon color */
+    font-size: 24px; /* Icon size */
+    transition: transform 0.3s, color 0.3s; /* Animation for hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    color: #007bff; /* Change color on hover */
+}
