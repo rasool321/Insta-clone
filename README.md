@@ -101,4 +101,4 @@ Inspired by Instagram and made with 💻 & ☕ by Rasool.
 
 ---
 
-Let me know if you want to include screenshots, demo video links, or add **deployment instructions on Render/Netlify/Vercel**, etc. I can help you host it too if you're ready for the next level 🚀
+Let me know if you want to include screenshots, demo video links, or add **deployment guidelines**, etc. I can help you host it too if you're ready for the next level 🚀
